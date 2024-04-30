@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--emsemble--adobedevxsc.hlx.page/
-- Live: https://main--emsemble--adobedevxsc.hlx.live/
+- Preview: https://main--ensemble--adobedevxsc.hlx.page/
+- Live: https://main--ensemble--adobedevxsc.hlx.live/
 
 ## Installation
 
