@@ -19,6 +19,9 @@
   --dark-color: #ccc;
   --text-color: black;
 
+  --color-white: #fff;
+  --color-black: #000;
+
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
   --heading-font-family: var(--body-font-family);

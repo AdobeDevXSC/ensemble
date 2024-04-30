@@ -1,6 +1,7 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
+  background-color: blue;
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -19,6 +20,7 @@ header nav {
   height: var(--nav-height);
   padding: 0 1rem;
   font-family: var(--body-font-family);
+  color: var(--color-white);
 }
 
 header nav[aria-expanded="true"] {
@@ -176,6 +178,7 @@ header nav .nav-sections ul  {
 
 header nav .nav-sections ul > li {
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 header nav .nav-sections ul > li > ul {
