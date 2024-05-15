@@ -86,6 +86,18 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+// Function to change background color to blue
+function changeBackgroundColor() {
+  const navWrapper = document.querySelector('header .nav-wrapper');
+  navWrapper.classList.add('show-bg');
+}
+
+// Function to reset background color to original
+function resetBackgroundColor() {
+  const navWrapper = document.querySelector('header .nav-wrapper');
+  navWrapper.classList.remove('show-bg');
+}
+
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -119,11 +131,17 @@ export default async function decorate(block) {
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-      navSection.addEventListener('click', () => {
+      navSection.addEventListener('mouseenter', () => {
         if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        }
+      });
+      navSection.addEventListener('mouseleave', () => {
+        if (isDesktop.matches) {
+          navSection.setAttribute('aria-expanded', 'false');
+          toggleAllNavSections(navSections);
         }
       });
     });
@@ -147,3 +165,19 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
 }
+
+  // Variable to track previous scroll position
+  let previousScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Event listener for scroll event
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > 200 && currentScroll > previousScroll) {
+      changeBackgroundColor();
+    } else if (currentScroll <= 200 && currentScroll < previousScroll) {
+      resetBackgroundColor();
+    }
+
+    previousScroll = currentScroll;
+  });
