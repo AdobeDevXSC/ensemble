@@ -72,6 +72,10 @@ header nav a:any-link {
   color: currentcolor;
 }
 
+header nav a:any-link:hover {
+  text-decoration: none;
+}
+
 /* hamburger */
 header nav .nav-hamburger {
   grid-area: hamburger;
@@ -314,6 +318,8 @@ header nav .nav-tools .button-container .button {
   font-size: 16px;
   text-transform: uppercase;
   padding: 0.5rem 1.2rem;
+  background-color: var(--color-white);
+  color: #2886BB;
 }
 
 header nav .nav-tools .button-container .button:hover {
@@ -322,11 +328,11 @@ header nav .nav-tools .button-container .button:hover {
 }
 
 header .show-bg nav .nav-tools .button-container .button {
-  background-color: rgba(255, 142, 47, 1);
+  background-color: #2886BB;
+  color: var(--color-white);
 }
 
-@media (width <= 900px) {
-  header nav .nav-tools .button-container .button {
-    background-color: rgba(255, 142, 47, 1);
-  }
+header .show-bg nav .nav-tools .button-container .button:hover {
+  background-color: rgba(255, 142, 47, 1);
+  color: var(--color-white);
 }
