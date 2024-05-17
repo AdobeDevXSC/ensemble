@@ -16,19 +16,27 @@ export default async function decorate(block) {
   const footer = document.createElement('div');
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
-  const secondSection = footer.querySelectorAll('.section')[1];
+  // Set background image
+  const footerWrapper = document.querySelector('footer');
+  const firstSection = footer.querySelectorAll('.section')[0];
+  const imageSource = firstSection.querySelector('source[type="image/jpeg"]');
+  const srcset = imageSource.getAttribute('srcset');
 
+  footerWrapper.style.backgroundImage = 'url(' + srcset + ')';
+  const imageWrapper = firstSection.querySelector('p');
+  imageWrapper.remove();
+
+  // Modify section html
+  const secondSection = footer.querySelectorAll('.section')[1];
   const defaultContentWrapper = secondSection.querySelector('.default-content-wrapper');
   const newDiv = document.createElement('div');
   newDiv.classList.add('wrapper');
   const allParagraphs = defaultContentWrapper.querySelectorAll('p');
   
-  // Append the last two <p> elements to the new div
   for (let i = allParagraphs.length - 2; i < allParagraphs.length; i++) {
     newDiv.appendChild(allParagraphs[i]);
   }
   
-  // Append the new div inside the .default-content-wrapper
   defaultContentWrapper.appendChild(newDiv);
 
   block.append(footer);
