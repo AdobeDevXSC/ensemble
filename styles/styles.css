@@ -186,18 +186,18 @@ main img {
 
 /* sections */
 main .section {
-  padding: 64px 16px;
+  padding: 48px 16px;
 }
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 48px 32px;
   }
 }
 
 @media (width >= 900px) {
   .section > div {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
   }
 }
@@ -205,5 +205,5 @@ main .section {
 /* section metadata */
 main .section.light,
 main .section.highlight {
-  background-color: var(--light-color);
+  background-color: rgba(239, 243, 244, 1);
 }
