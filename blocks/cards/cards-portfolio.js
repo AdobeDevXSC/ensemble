@@ -1,15 +1,12 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 
 export default function CardsPortfolio (block) {
-  console.log("cards portfolio block: ", block);
-
   const link = block.querySelector('a');
   let data = [];
+
   block.textContent = '';
 
-  function createCards(groups) {
-    console.log("groups: ", groups);
-  
+  function createCards(groups) {  
     const updatedCards = [];
   
     groups.forEach((group) => {
@@ -43,14 +40,15 @@ export default function CardsPortfolio (block) {
   
             smallCards.push(`
               <div class="small-card">
-                <div class="wrapper">
-                  <div class="card-images">
+                <div class="card-flip wrapper">
+                  <div class="card card-images">
                     ${optimizedBgImage.outerHTML}
                     ${optimizedLogoImage.outerHTML}
                   </div>
-                  <div class="card-info" style="display:none">
-                    <p>${item.description}</p>
-                    <a href="${item.contactUsLink}"></a>
+                  <div class="card card-info">
+                    <p class="desktop">${item.description}</p>
+                    <p class="mobile"><a href="${item.contactUsLink}">Contact Us</a> to learn more about this project</p>
+                    <a class="desktop-contact-us" href="${item.contactUsLink}">Contact Us</a>
                   </div>
                 </div>
               </div>
@@ -71,6 +69,14 @@ export default function CardsPortfolio (block) {
     })
   
     block.innerHTML = `<div class="portfolio-card-container">${updatedCards.join('')}</div>`;
+
+    //Add card-flip animation
+    const cards = document.querySelectorAll('.card-flip');
+    [...cards].forEach((card)=>{
+      card.addEventListener( 'click', function() {
+        card.classList.toggle('is-flipped');
+      });
+    });
   }
 
   function sortData(data) { //TBD: Need to optimize to support 8 cards

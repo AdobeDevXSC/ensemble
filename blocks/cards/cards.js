@@ -5,7 +5,9 @@ export default function decorate(block) {
   // console.log("Cards block: ", block);
 
   const isPortfolio = block.classList.contains('portfolio');
-  if (isPortfolio) CardsPortfolio(block);
+  if (isPortfolio) {
+    CardsPortfolio(block);
+  }
 
   
   // /* change to ul, li */
