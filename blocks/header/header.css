@@ -9,6 +9,7 @@ header .nav-wrapper {
 header .nav-wrapper.show-bg {
   background-color: var(--color-white);
   box-shadow: 0 4px 6px -1px rgba(10, 29, 41, 0.1), 0 2px 4px -1px rgba(40, 134, 187, 0.06);
+  transition-duration: .5s;
 }
 
 header .nav-wrapper.show-bg .nav-sections {

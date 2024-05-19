@@ -1,3 +1,4 @@
+/* Boilerplate default cards styling */ 
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -28,4 +29,127 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+}
+
+.section.cards-container h4 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Cards - Portfolio */
+.cards.portfolio { 
+  margin-top: 4rem;
+}
+
+.cards.portfolio .portfolio-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.cards.portfolio .case-study-card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.cards.portfolio .case-study-card .wrapper {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  height: 100%;
+}
+
+.cards.portfolio .case-study-card a {
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-out;
+}
+
+.cards.portfolio .case-study-card a:hover {
+  opacity: 0.9;
+}
+
+.cards.portfolio .case-study-card .pill {
+  position: absolute;
+  top: 0;
+  color: white;
+  z-index: 1;
+  text-transform: uppercase;
+  padding: 16px;
+  font-size: 16px;
+}
+
+.cards.portfolio .case-study-card .card-images {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.cards.portfolio .case-study-card .card-images picture:first-of-type {
+  position: relative;
+}
+
+.cards.portfolio .case-study-card .card-images picture:last-of-type {
+  position: absolute;
+  left: 0;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.cards.portfolio .case-study-card .card-images picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cards.portfolio .small-card-container {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 16px;
+  column-gap: 16px;
+}
+
+.cards.portfolio .small-card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.cards.portfolio .small-card .wrapper {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  height: 100%;
+}
+
+.cards.portfolio .small-card .card-images {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.cards.portfolio .small-card .card-images picture:first-of-type {
+  position: relative;
+}
+
+.cards.portfolio .small-card .card-images picture:last-of-type {
+  position: absolute;
+  left: 0;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.cards.portfolio .small-card .card-images picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cards.portfolio .small-card .card-info {
+
 }
