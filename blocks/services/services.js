@@ -1,5 +1,7 @@
 
 export default function decorate(block) { 
+  console.log("block: ", block);
+
   const servicesInfoContainer = document.createElement("div");
   const servicesCardContainer = document.createElement("div");
   servicesInfoContainer.classList.add('services-info-container');
@@ -17,6 +19,21 @@ export default function decorate(block) {
     imageWrapper.classList.add('image-wrapper');
     const infoWrapper = child.querySelector('div:last-of-type');
     infoWrapper.classList.add('info-wrapper');
+  
+    const link = child.querySelector('a');
+    const href = link.href;
+  
+    const newLink = document.createElement('a');
+    newLink.href = href;
+
+    // Find and remove the last <p> element containing the link
+    const lastParagraph = child.querySelector('p:last-of-type');
+    if (lastParagraph && lastParagraph.contains(link)) {
+      lastParagraph.remove();
+    }
+  
+    child.parentNode.insertBefore(newLink, child);
+    newLink.appendChild(child);
   });
 
   block.appendChild(servicesInfoContainer);

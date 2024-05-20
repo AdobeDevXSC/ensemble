@@ -278,6 +278,15 @@
     align-items: center;
     justify-content: center;
   }
+
+  .cards.portfolio .case-study-card .pill {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .section.cards-container .default-content-wrapper .button-container a {
+    margin-top: 2rem;
+  }
 }
 
 @media (width <= 575px) {

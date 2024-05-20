@@ -50,12 +50,26 @@
   margin-top: 3rem;
 }
 
+.services .services-card-container > a:hover {
+  text-decoration: none;
+}
+
 .services .service-card {
   padding: 20px;
   border-radius: 5px;
   background-color: var(--color-white);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  color: var(--color-black);
+}
+
+.services .service-card:hover {
+  cursor: pointer;
+}
+
+.services .service-card:hover > * {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
 }
 
 .services .service-card img {
