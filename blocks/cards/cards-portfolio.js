@@ -11,7 +11,7 @@ export default function CardsPortfolio (block) {
   
     groups.forEach((group) => {
       if (group.length === 5) {
-        let smallCards = []; // Temporary array to hold small cards
+        let smallCards = [];
   
         group.forEach((item, i) => {
           if (i === 0 && item.caseStudy === 'true') {
@@ -32,9 +32,7 @@ export default function CardsPortfolio (block) {
               </div>
             `);
   
-          } else {
-            console.log("small card: ", item);
-  
+          } else {  
             const optimizedBgImage = createOptimizedPicture(item.backgroundImage, item.name, true, [{ width: '350' }]);
             const optimizedLogoImage = createOptimizedPicture(item.logoImage, item.name, true, [{ width: '350' }]);
   
@@ -56,7 +54,6 @@ export default function CardsPortfolio (block) {
           }
         });
   
-        // After all small cards for a group have been created, push the entire small-card-container into updatedCards
         updatedCards.push(`
           <div class="small-card-container">
             ${smallCards.join('')}

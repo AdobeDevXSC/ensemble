@@ -1,0 +1,133 @@
+.services-container {
+  background-image: linear-gradient(rgb(239, 243, 244), rgba(239, 243, 244, 0));
+  background-color: transparent;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+}
+
+.services .services-info-container {
+  width: 100%;
+}
+
+.services .services-info-container p {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.75rem;
+  margin: 0;
+}
+
+.services .services-info-container p:first-of-type {
+  width: 63%;
+}
+
+.services .services-info-container a {
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  font-size: 16px;
+  font-weight: 700;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #000;
+  margin-top: 3rem;
+}
+
+.services .services-info-container a:hover {
+  color: var(--color-white);
+  border: 1px solid transparent;
+  background-color: rgba(255, 142, 47, 1);
+  transition-duration: .3s;
+}
+
+.services .services-card-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 20px;
+  margin-top: 3rem;
+}
+
+.services .service-card {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.services .service-card img {
+  height: 64px;
+  width: auto;
+}
+
+.services .service-card p {
+  margin: 0;
+}
+
+.services .service-card p:first-of-type {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.services .service-card p:nth-of-type(2) {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 82, 115, 1);
+  line-height: normal;
+}
+
+.services .service-card p:nth-of-type(3) {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.25rem;
+  padding-top: 7px;
+}
+
+@media (width >= 1300px) {
+  .services {
+    flex-direction: row;
+  }
+
+  .services .services-info-container {
+    width: 50%;
+  }
+
+  .services .services-info-container > div {
+    position: sticky;
+    top: 80px;
+    padding-top: 1.5rem;
+  }
+  
+  .services .services-card-container {
+    width: 50%;
+    margin-top: 0;
+  }
+
+  .services .services-info-container p:first-of-type {
+    width: 83.33%;
+    padding-right: 32px;
+  }
+
+  .services .service-card {
+    max-width: 267px;
+  }
+}
+
+@media (width <= 768px) {
+  .services .services-info-container p:first-of-type {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .services .services-info-container .button-container p {
+    text-align: center;
+  }
+
+  .services .services-card-container {
+    margin-top: 2rem;
+  }
+}
