@@ -1,7 +1,5 @@
 
 export default function decorate(block) { 
-  console.log("block: ", block);
-
   const servicesInfoContainer = document.createElement("div");
   const servicesCardContainer = document.createElement("div");
   servicesInfoContainer.classList.add('services-info-container');
