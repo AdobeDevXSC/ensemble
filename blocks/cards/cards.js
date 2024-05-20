@@ -1,12 +1,19 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import CardsPortfolio from './cards-portfolio.js';
+import CardsCustomers from './cards-customers.js';
 
 export default function decorate(block) {
   // console.log("Cards block: ", block);
 
   const isPortfolio = block.classList.contains('portfolio');
+  const isCustomers = block.classList.contains('customers');
+
   if (isPortfolio) {
     CardsPortfolio(block);
+  }
+
+  if (isCustomers) {
+    CardsCustomers(block);
   }
 
   
