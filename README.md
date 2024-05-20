@@ -1,5 +1,4 @@
-# Your Project's Title...
-Your project's description...
+# Lunch & Learn Edge Delivery Services Demo
 
 ## Environments
 - Preview: https://main--ensemble--adobedevxsc.hlx.page/
