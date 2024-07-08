@@ -320,7 +320,7 @@ header nav .nav-tools .button-container .button {
   text-transform: uppercase;
   padding: 0.5rem 1.2rem;
   background-color: var(--color-white);
-  color: #2886BB;
+  color: var(--color-black);
 }
 
 header nav .nav-tools .button-container .button:hover {
