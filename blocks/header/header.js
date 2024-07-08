@@ -164,6 +164,15 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  // Update brand logo title attribute
+  const navBrandSection = block.querySelector('.section.nav-brand');
+  const iconName = navBrandSection.querySelector('img');
+  const link = navBrandSection.querySelector('a');
+  if (iconName && link) {
+  const iconNameValue = iconName.getAttribute('data-icon-name');
+  link.setAttribute('title', iconNameValue);
+  }
 }
 
   // Variable to track previous scroll position
