@@ -40,4 +40,13 @@ export default async function decorate(block) {
   defaultContentWrapper.appendChild(newDiv);
 
   block.append(footer);
+
+  // Update brand logo title attribute
+  const section = block.querySelector('.section:nth-child(2) .button-container');
+  const iconName = section.querySelector('img');
+  const link = section.querySelector('a');
+  if (iconName && link) {
+  const iconNameValue = iconName.getAttribute('data-icon-name');
+  link.setAttribute('title', iconNameValue);
+  }
 }
