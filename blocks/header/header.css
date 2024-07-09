@@ -321,6 +321,8 @@ header nav .nav-tools .button-container .button {
   padding: 0.5rem 1.2rem;
   background-color: var(--color-white);
   color: var(--color-black);
+  margin-top: 0;
+  border: none;
 }
 
 header nav .nav-tools .button-container .button:hover {

@@ -401,6 +401,9 @@
 .cards.customers .carousel-wrapper .carousel-nav-controls .arrow {
   padding: 10px;
   background-color: transparent;
+  margin-top: 0;
+  border: none;
+  cursor: pointer;
 }
 
 .cards.customers .carousel-wrapper .carousel-nav-controls .arrow.disabled {

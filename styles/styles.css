@@ -42,6 +42,7 @@
 
   /* nav height */
   --nav-height: 64px;
+  --max-width: 1400px;
 }
 
 @font-face {
@@ -131,7 +132,9 @@ a:hover {
 }
 
 /* buttons */
-a.button:any-link, button {
+a.button:any-link,
+button,
+.services-section .default-content-wrapper a {
   display: inline-block;
   text-transform: uppercase;
   padding: 1rem 1.5rem;
@@ -144,9 +147,15 @@ a.button:any-link, button {
   margin-top: 1.5rem;
   margin-bottom: 0;
   font-style: normal;
+  text-align: center;
 }
 
-a.button:hover, a.button:focus, button:hover, button:focus {
+a.button:hover,
+a.button:focus,
+button:hover,
+button:focus,
+.services-section .default-content-wrapper a:hover,
+.services-section .default-content-wrapper a:focus {
   color: var(--color-white);
   border: 1px solid transparent;
   background-color: rgba(255, 142, 47, 1);
@@ -190,7 +199,7 @@ main .section {
 
 @media (width >= 900px) {
   .section > div {
-    max-width: 1400px;
+    max-width: var(--max-width);
     margin: auto;
   }
 }

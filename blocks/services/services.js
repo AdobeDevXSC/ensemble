@@ -1,39 +1,42 @@
-
 export default function decorate(block) { 
-  const servicesInfoContainer = document.createElement("div");
-  const servicesCardContainer = document.createElement("div");
-  servicesInfoContainer.classList.add('services-info-container');
-  servicesCardContainer.classList.add('services-card-container');
+  // Create a container for the service cards
+  const cardContainer = document.createElement('div');
+  cardContainer.classList.add('card-container');
 
-  servicesInfoContainer.appendChild(block.children[0]);
+  // Iterate over each child element within the block
+  [...block.children].forEach((child) => {
+    // Add a class to each child element for clearer CSS targeting
+    child.classList.add('card');
 
-  while (block.children.length > 0) {
-      servicesCardContainer.appendChild(block.children[0]);
-  }
-
-  [...servicesCardContainer.children].forEach((child) => {
-    child.classList.add('service-card');
-    const imageWrapper = child.querySelector('div:first-of-type');
+    // Assign a unique class to the div containing the image
+    const imageWrapper = child.firstElementChild;
     imageWrapper.classList.add('image-wrapper');
-    const infoWrapper = child.querySelector('div:last-of-type');
-    infoWrapper.classList.add('info-wrapper');
-  
-    const link = child.querySelector('a');
-    const href = link.href;
-  
-    const newLink = document.createElement('a');
-    newLink.href = href;
 
-    // Find and remove the last <p> element containing the link
-    const lastParagraph = child.querySelector('p:last-of-type');
-    if (lastParagraph && lastParagraph.contains(link)) {
+    // Assign a unique class to the div containing the card information
+    const infoWrapper = child.lastElementChild;
+    infoWrapper.classList.add('info-wrapper');
+
+    // Find and remove the last <p> element that contains the link. Keep track of href value. 
+    const lastParagraph = infoWrapper.querySelector('p:last-of-type');
+    const link = lastParagraph.querySelector('a');
+    let href = '#';
+
+    if (lastParagraph.contains(link)) {
+      href = link?.href;
       lastParagraph.remove();
     }
   
-    child.parentNode.insertBefore(newLink, child);
-    newLink.appendChild(child);
+    // Create a new <a> element to wrap the entire card, enabling redirect on click
+    const wrapperLink = document.createElement('a');
+    wrapperLink.href = href;
+
+    // Append the child element into the wrapper link
+    wrapperLink.appendChild(child);
+
+    // Append the wrapper link to the card container
+    cardContainer.appendChild(wrapperLink);
   });
 
-  block.appendChild(servicesInfoContainer);
-  block.appendChild(servicesCardContainer);
+  // Append the card container to the block element
+  block.appendChild(cardContainer);
 }
