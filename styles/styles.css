@@ -253,7 +253,7 @@ main .section.contact .button-container a:hover {
 }
 
 /* section services */
-.services-section {
+/* .services-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -296,4 +296,4 @@ main .section.contact .button-container a:hover {
     width: 100%;
     font-size: 18px;
   }
-}
+} */
