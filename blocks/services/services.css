@@ -63,28 +63,11 @@
 }
 
 @media (min-width: 1300px) {
-  .services-section {
-    flex-direction: row;
-  }
-
-  .services-section > div {
-    width: 50%;
-    max-width: calc(var(--max-width) / 2);
-    margin-top: 0;
-  }
-
   .services {
     flex-direction: row;
   }
   
   .services .card-container {
     margin-top: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .services-section .default-content-wrapper p {
-    width: 100%;
-    font-size: 18px;
   }
 }

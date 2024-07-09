@@ -278,3 +278,22 @@ main .section.contact .button-container a:hover {
   padding-top: 1.5rem;
   margin: 0;
 }
+
+@media (min-width: 1300px) {
+  .services-section {
+    flex-direction: row;
+  }
+
+  .services-section > div {
+    width: 50%;
+    max-width: calc(var(--max-width) / 2);
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section .default-content-wrapper p {
+    width: 100%;
+    font-size: 18px;
+  }
+}

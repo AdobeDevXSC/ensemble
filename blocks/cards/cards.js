@@ -1,10 +1,12 @@
 import { createOptimizedPicture } from '../../scripts/aem.js';
 import CardsPortfolio from './cards-portfolio.js';
 import CardsCustomers from './cards-customers.js';
+import CardsServices from './cards-services.js';
 
 export default function decorate(block) {
   const isPortfolio = block.classList.contains('portfolio');
   const isCustomers = block.classList.contains('customers');
+  const isServices = block.classList.contains('services');
 
   if (isPortfolio) {
     CardsPortfolio(block);
@@ -14,7 +16,11 @@ export default function decorate(block) {
     CardsCustomers(block);
   }
 
-  if (!isPortfolio && !isCustomers) {
+  if (isServices) {
+    CardsServices(block);
+  }
+
+  if (!isPortfolio && !isCustomers && !isServices) {
     block.classList.add('default');
 
     /* change to ul, li */
