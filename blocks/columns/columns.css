@@ -21,42 +21,22 @@
   object-fit: cover;
 }
 
-.columns > div > div:nth-of-type(2) {
+.columns > div > div:not(.columns-img-col) {
   padding: 1.5rem 1rem;
 }
 
-.columns > div > div:nth-of-type(2) p:nth-of-type(1) {
+.columns > div > div:not(.columns-img-col) p:nth-of-type(1) {
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
   margin: 0;
 }
 
-.columns > div > div:nth-of-type(2) p:nth-of-type(2) {
+.columns > div > div:not(.columns-img-col) p:nth-of-type(2) {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   margin-top: 2rem;
-}
-
-.columns > div > div:nth-of-type(2) p.button-container a {
-  text-transform: uppercase;
-  padding: 1rem 1.5rem;
-  font-size: 14px;
-  font-weight: 700;
-  border: 1px solid #000;
-  border-radius: 5px;
-  background-color: transparent;
-  color: #000;
-  margin-top: 1.5rem;
-  margin-bottom: 0;
-}
-
-.columns > div > div:nth-of-type(2) p.button-container a:hover {
-  color: var(--color-white);
-  border: 1px solid transparent;
-  background-color: rgba(255, 142, 47, 1);
-  transition-duration: .3s;
 }
 
 @media (width >= 900px) {
@@ -70,18 +50,18 @@
     width: 70%;
   }
 
-  .columns > div > div:nth-of-type(2) {
+  .columns > div > div:not(.columns-img-col) {
     order: unset;
     width: 30%;
     padding: 3rem 2rem;
   }
 
-  .columns > div > div:nth-of-type(2) p:nth-of-type(1) {
+  .columns > div > div:not(.columns-img-col) p:nth-of-type(1) {
     font-size: 24px;
     line-height: 32px;
   }
 
-  .columns > div > div:nth-of-type(2) p:nth-of-type(2) {
+  .columns > div > div:not(.columns-img-col) p:nth-of-type(2) {
     font-size: 18px;
     line-height: 24px;
   }

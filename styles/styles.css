@@ -132,39 +132,32 @@ a:hover {
 
 /* buttons */
 a.button:any-link, button {
-  font-family: var(--body-font-family);
   display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
-  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #000;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
   font-style: normal;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: 16px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 30px;
 }
 
-a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
+a.button:hover, a.button:focus, button:hover, button:focus {
+  color: var(--color-white);
+  border: 1px solid transparent;
+  background-color: rgba(255, 142, 47, 1);
+  transition-duration: .3s;
+  text-decoration: none;
 }
+
 
 button:disabled, button:disabled:hover {
   background-color: var(--light-color);
   cursor: unset;
-}
-
-a.button.secondary, button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color)
 }
 
 main img {
