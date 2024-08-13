@@ -1,9 +1,4 @@
 /* Boilerplate default cards styling */ 
-.cards.default {
-  margin-top: 3rem;
-  padding: 1rem 0;
-}
-
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -428,3 +423,9 @@
   }
 }
 /* End of Cards - Services */
+
+/* Cards - Teams */
+.cards.teams {
+  margin-top: 3rem;
+  padding: 1rem 0;
+}
