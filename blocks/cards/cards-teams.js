@@ -11,7 +11,7 @@ export default function CardsTeams (block) {
   
     data.forEach((item) => {
       const card = [];
-      const optimizedImage = createOptimizedPicture(item.image, item.title, true, [{ width: '750' }]);
+      const optimizedImage = createOptimizedPicture(item.image, `Role: ${item.title}`, true, [{ width: '750' }]);
 
       card.push(`
         <a href=${item.url}>
