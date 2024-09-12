@@ -116,6 +116,7 @@ export default function CardsPortfolio (block) {
       
       let sortedGroups = sortData(data);
       createCards(sortedGroups);
+      return block;
     } else {
       console.log("Unable to get json data for cards portfolio");
     }
