@@ -324,7 +324,7 @@ function createOptimizedPicture(
   eager = false,
   breakpoints = [{ media: '(min-width: 600px)', width: '2000' }, { width: '750' }],
 ) {
-  console.log("window.location.origin: ", window.location.origin);
+  console.log("window.location: ", window.location);
   const url = new URL(src, window.location.origin);
   const picture = document.createElement('picture');
   const { pathname } = url;
