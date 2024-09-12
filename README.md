@@ -1,4 +1,4 @@
-# Lunch & Learn Edge Delivery Services Demo
+# Edge Delivery Services Velocity Demo
 
 ## Environments
 - Preview: https://main--ensemble--adobedevxsc.hlx.page/
