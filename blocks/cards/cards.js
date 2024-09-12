@@ -14,7 +14,4 @@ export default function decorate(block) {
       blockHandlers[key](block);
     }
   });
-  
-  
-  console.log("testing block libary. cards.js init")
 }
