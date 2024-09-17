@@ -129,6 +129,11 @@ export default function CardsPortfolio (block) {
           remainingCardsWrapper.style.display = 'block';
         } else {
           remainingCardsWrapper.style.display = 'none';
+          
+          const parentTarget = e.currentTarget.parentElement.parentElement.parentElement;
+          parentTarget.scrollIntoView({
+            behavior: 'smooth'
+          });
         }
       });
     }
