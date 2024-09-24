@@ -74,7 +74,7 @@ export default function CardsPortfolio (block) {
       <div class="portfolio-card-container ${hasCaseStudy ? '' : 'no-case-study'}">
         ${initialCards.join('')}
       </div>
-      ${remainingCards.length > 0 ? `<div class="remaining-cards"><div class="small-card-container">${remainingCards.join('')}</div></div><button type="button" class="view-more-btn">View More</button>` : ''}
+      ${remainingCards.length > 0 ? `<div class="remaining-cards"><div class="small-card-container">${remainingCards.join('')}</div></div>` : ''}
     `;
 
     addEventListeners();
@@ -117,26 +117,26 @@ export default function CardsPortfolio (block) {
       });
     });
 
-    //View more button
-    const viewMoreBtn = document.querySelector('.view-more-btn');
-    const remainingCardsWrapper = document.querySelector('.remaining-cards');
+    // //View more button
+    // const viewMoreBtn = document.querySelector('.view-more-btn');
+    // const remainingCardsWrapper = document.querySelector('.remaining-cards');
 
-    if (viewMoreBtn) {
-      viewMoreBtn.addEventListener('click', (e) => {
-        viewMoreBtn.classList.toggle('active');
+    // if (viewMoreBtn) {
+    //   viewMoreBtn.addEventListener('click', (e) => {
+    //     viewMoreBtn.classList.toggle('active');
   
-        if (viewMoreBtn.classList.contains('active')) {
-          remainingCardsWrapper.style.display = 'block';
-        } else {
-          remainingCardsWrapper.style.display = 'none';
+    //     if (viewMoreBtn.classList.contains('active')) {
+    //       remainingCardsWrapper.style.display = 'block';
+    //     } else {
+    //       remainingCardsWrapper.style.display = 'none';
 
-          const parentTarget = e.currentTarget.parentElement.parentElement.parentElement;
-          parentTarget.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
-    }
+    //       const parentTarget = e.currentTarget.parentElement.parentElement.parentElement;
+    //       parentTarget.scrollIntoView({
+    //         behavior: 'smooth'
+    //       });
+    //     }
+    //   });
+    // }
   }
 
   async function initialize() {

@@ -9,7 +9,7 @@ export default function CardsTeams (block) {
   function createCards(data) { 
     const cards = [];
   
-    data.forEach((item) => {
+    data.slice(0, 5).forEach((item) => {
       const card = [];
       const optimizedImage = createOptimizedPicture(item.image, `Role: ${item.title}`, true, [{ width: '750' }]);
 

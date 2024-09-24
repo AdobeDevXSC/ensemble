@@ -88,7 +88,7 @@
   border-radius: 5px;
   background-color: transparent;
   color: #000;
-  margin-top: 0;
+  margin-top: 2rem;
   margin-bottom: 0;
 }
 
@@ -223,7 +223,7 @@
 }
 
 .cards.portfolio .remaining-cards {
-  display: none;
+  /* display: none; */
   margin-top: 1.25rem;
   min-height: 260px;
 }
@@ -239,7 +239,6 @@
 .cards.portfolio .remaining-cards .small-card {
   min-height: 260px;
 }
-
 
 .cards.portfolio .small-card {
   perspective: 600px; /* animation size */
