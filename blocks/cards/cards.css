@@ -223,7 +223,7 @@
 }
 
 .cards.portfolio .remaining-cards {
-  /* display: none; */
+  display: none;
   margin-top: 1.25rem;
   min-height: 260px;
 }
