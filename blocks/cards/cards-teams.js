@@ -3,13 +3,14 @@ import { createOptimizedPicture } from '../../scripts/aem.js';
 export default function CardsTeams (block) {
   const link = block.querySelector('a');
   let data = [];
+  let limit;
 
   block.textContent = '';
 
   function createCards(data) { 
     const cards = [];
   
-    data.slice(0, 5).forEach((item) => {
+    data.slice(0, limit).forEach((item) => {
       const card = [];
       const optimizedImage = createOptimizedPicture(item.image, `Role: ${item.title}`, true, [{ width: '750' }]);
 
@@ -28,10 +29,12 @@ export default function CardsTeams (block) {
 
   async function initialize() {
     const response = await fetch(link?.href);
+    const hasLimitParam = response?.url.includes('limit=');
 
     if (response.ok) {
       const jsonData = await response.json();
-      data = jsonData?.data;
+      data = jsonData.data;
+      limit = hasLimitParam ? jsonData.limit : 5; //set default limit to 5
       
       createCards(data);
     } else {
