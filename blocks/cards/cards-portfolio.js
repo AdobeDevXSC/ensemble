@@ -116,27 +116,6 @@ export default function CardsPortfolio (block) {
         card.classList.toggle('is-flipped');
       });
     });
-
-    // //View more button
-    // const viewMoreBtn = document.querySelector('.view-more-btn');
-    // const remainingCardsWrapper = document.querySelector('.remaining-cards');
-
-    // if (viewMoreBtn) {
-    //   viewMoreBtn.addEventListener('click', (e) => {
-    //     viewMoreBtn.classList.toggle('active');
-  
-    //     if (viewMoreBtn.classList.contains('active')) {
-    //       remainingCardsWrapper.style.display = 'block';
-    //     } else {
-    //       remainingCardsWrapper.style.display = 'none';
-
-    //       const parentTarget = e.currentTarget.parentElement.parentElement.parentElement;
-    //       parentTarget.scrollIntoView({
-    //         behavior: 'smooth'
-    //       });
-    //     }
-    //   });
-    // }
   }
 
   async function initialize() {
