@@ -1,25 +1,19 @@
-main .hero-container > div {
+.hero-container .hero-wrapper {
   max-width: unset;
-}
-  
-main .hero-container {
   padding: 0;
 }
 
 .hero {
   position: relative;
-  padding: 32px;
-  min-height: 525px;
+  padding: 40px 24px;
+  min-height: 300px;
 }
 
 .hero h1 {
-  max-width: 400px;
+  max-width: 1200px;
+  margin-left: auto;
   margin-right: auto;
-  color: white;
-  text-transform: uppercase;
-  padding: 5rem;
-  letter-spacing: .05em;
-  line-height: 1.4;
+  color: var(--background-color);
 }
 
 .hero picture {
@@ -36,14 +30,8 @@ main .hero-container {
   height: 100%;
 }
 
-@media (width <= 768px) {
+@media (width >= 900px) {
   .hero {
-    min-height: 800px;
-  }
-
-  .hero h1 {
-    font-size: 40px;
-    padding: 5rem 1rem;
-    max-width: 300px;
+    padding: 40px 32px;
   }
 }
